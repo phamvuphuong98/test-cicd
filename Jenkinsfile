@@ -1,10 +1,6 @@
 pipeline {
 
     agent any
-
-    environment {
-        MYSQL_ROOT_LOGIN = credentials('mysql')
-    }
     stages {
         stage('Packaging/Pushing imagae') {
 
