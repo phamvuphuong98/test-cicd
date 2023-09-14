@@ -8,6 +8,8 @@ pipeline {
             }
             steps {
                 withDockerRegistry(credentialsId: 'dockerhub', url: 'https://index.docker.io/v1/') {
+                    echo 'ok'
+                    sh 'pwd'
                     sh 'docker build -t phamvuphuong98/test-cicd .'
                     sh 'docker push phamvuphuong98/test-cicd'
                 }
