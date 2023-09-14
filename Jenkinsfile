@@ -6,7 +6,8 @@ pipeline {
     stages { 
         stage('SCM Checkout') {
             steps{
-                git url: 'https://github.com/not-show-my-url.git'
+                sh 'git clone https://github.com/phamvuphuong98/test-cicd.git'
+                sh 'cd test-cicd'
             }
         }
 
