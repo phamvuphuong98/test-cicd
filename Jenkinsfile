@@ -3,7 +3,9 @@ pipeline {
     agent any
     stages {
         stage('Packaging/Pushing imagae') {
-            agent { node {label 'master'}}
+            agent {
+                label 'Built-In Node'
+            }
             steps {
                 withDockerRegistry(credentialsId: 'dockerhub', url: 'https://index.docker.io/v1/') {
                     sh 'docker build -t phamvuphuong98/test-cicd .'
