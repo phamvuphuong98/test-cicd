@@ -14,7 +14,7 @@ pipeline {
 
         stage('Build docker image') {
             steps {  
-                sh 'docker build -t .'
+                sh 'docker build -t phamvuphuong98/test-cicd:latest .'
             }
         }
         stage('login to docker hub') {
