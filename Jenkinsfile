@@ -6,9 +6,7 @@ pipeline {
     stages { 
         stage('SCM Checkout') {
             steps{
-                script{
-                    checkout scm
-                }
+                git 'https://github.com/phamvuphuong98/test-cicd.git'
             }
         }
 
