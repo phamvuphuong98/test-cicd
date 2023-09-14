@@ -6,7 +6,7 @@ pipeline {
     stages { 
         stage('SCM Checkout') {
             steps{
-                git url: 'https://github.com/not-show-my-url.git',
+                git url: 'https://github.com/not-show-my-url.git'
             }
         }
 
